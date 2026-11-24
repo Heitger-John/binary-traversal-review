@@ -103,11 +103,15 @@ public class TraversalReview {
             return Integer.MIN_VALUE;
         }
         int topInt = Integer.MIN_VALUE;
-        if (evenMax(node.left) > topInt && topInt % 2 == 0)
+        if (node.data % 2 == 0)
+        {
+            topInt = node.data;
+        }
+        if (evenMax(node.left) > topInt)
         {
             topInt = evenMax(node.left);
         }
-        if (evenMax(node.right) > topInt && topInt % 2 == 0)
+        if (evenMax(node.right) > topInt)
         {
             topInt = evenMax(node.right);
         }
